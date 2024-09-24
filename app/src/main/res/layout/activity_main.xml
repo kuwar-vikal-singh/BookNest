@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ui.MainActivity">
+    
+    <RelativeLayout
+        android:id="@+id/header_title"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        >
+
+        <ProgressBar
+            android:id="@+id/loadingProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:progressTint="@color/blue"
+
+            />
+        <TextView
+            android:id="@+id/greeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/poppins"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"/>
+
+
+
+        <LinearLayout
+            android:id="@+id/lin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/_15sdp"
+            >
+            <ImageView
+                android:id="@+id/logoutImg"
+                android:layout_width="@dimen/_55sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:src="@drawable/boy"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="Logout"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+        <View
+            android:layout_below="@+id/lin"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/green"/>
+
+        
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_below="@+id/header_title"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="Genre"
+        android:layout_margin="15dp"
+        android:textColor="@color/black"/>
+
+
+    <ProgressBar
+        android:layout_below="@id/textView"
+        android:id="@+id/loadingProgressBar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:progressTint="@color/blue"
+
+        />
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/textView"
+        android:id="@+id/genreRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:scrollbars="none"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/genreRecyclerView"
+        android:layout_marginBottom="@dimen/_15sdp"
+
+        >
+        <LinearLayout
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Books"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/viewAllTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View All"
+                android:textColor="@color/green"
+                android:fontFamily="@font/poppins"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+
+        <ProgressBar
+            android:id="@+id/loadingProgressBar3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:progressTint="@color/blue"
+
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/bookListRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+
+
+    <TextView
+        android:id="@+id/slogan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BookNest – Where Stories Find Their Home!"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10sdp"
+        />
+
+
+
+
+
+
+</RelativeLayout>
